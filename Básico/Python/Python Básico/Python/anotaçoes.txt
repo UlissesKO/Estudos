@@ -1,0 +1,41 @@
+para saber se duas váriaveis se referem a um mesmo objeto, basta fazer assim:
+    id(variavel)
+    id(variavel2)
+
+    caso os id sejam iguais, o objeto é o mesmo
+
+Class   
+    Serve para juntar diversas funções em um lugar
+    uma classe deve ser dinamica ( ver "class")
+
+    __init__(self):
+         
+        permite criar a funcionalidade inicial da class
+        self serve para acessar as funçoes de uma instancia
+            todas as propriedades criadas para o self podem ser acessadas de qlqr lugar da classe
+
+    métodos são as funçoes dentro da class
+
+
+Match e classe
+    substituto de IFs ELIFs e ELSEs (ver arquivo match_case)
+    no match coloca a variavel a ser observada
+    e nos case é o que vai ter dentro da variavel, seja numero ou texto
+
+    caso o valor nao se encaixe nos cases faz assim:
+        case _:
+            codigo
+
+    _ é pra dizer que uma váriavel nao vai ser usada pra nada
+
+
+a função "is" se usa junto com um IF
+    if variavel is variavel2:
+        codigo
+    
+    serve para saber se o objeto é o mesmo 
+
+    == serve para saber se os valores são iguais
+    != se os valores são diferentes
+
+

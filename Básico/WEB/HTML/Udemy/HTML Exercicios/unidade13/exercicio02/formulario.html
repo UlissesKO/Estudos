@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Curso HTML5 Essencial</title>
+        
+        <link href="css/estilo.css" rel="stylesheet" media="screen">
+
+        <script>
+            function resultado() {
+                document.getElementById("resultado").innerHTML = document.getElementById("filhos").value;
+            }
+        </script>
+    </head>
+
+    <body>
+        
+        <h2>Formulário</h2>
+        <form action="destino.html" method="post">
+            <label for="nome">Nome completo</label>
+            <input type="text" name="nome" id="nome" size="30" maxlength="100" required autofocus placeholder="insira seu nome">
+            
+            <label for="telefone">Telefone</label>
+            <input type="tel" name="telefone" id="telefone">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="website">Web site</label>
+            <input type="url" name="website" id="website">
+
+            <label for="aniversario">Aniversário</label>
+            <input type="date" name="aniversario" id="aniversario">
+
+            <input type="number" name="filhos" id="filhos" min="1" max="7" value="1">
+
+            <input type="submit" value="Enviar" id="enviar" name="enviar">
+        </form>
+        <form action="index.html" method="post">
+
+            <input type="text" list="lojas" name="nome_loja" id="nome_loja" placeholder="digite o nome da loja" size="40">
+            <datalist id="lojas">
+                <option value="Centauro">Centauro</option>
+                <option value="Dutra Máquinas">Dutra Máquinas</option>
+                <option value="Dutra Otica">Dutra Otica</option>
+                <option value="Dutra Tenis">Dutra Tenis</option>
+                <option value="Visão Bordados">Visão Bordados</option>
+                <option value="Net Shoes">Net Shoes</option>
+                <option value="Hering">Hering</option>
+            </datalist>
+        </form>
+        <form action="formulario.html" method="post">
+            <input type="range" id="filhos" min="1" max="30" value="3" onchange="resultado()">
+            <span id="resultado"></span>
+        </form>
+        <form action="formulario.html" method="post">
+            <input type="color" name="cor" id="cor">
+        </form>
+        <form action="formulario.html" method="post">
+            <input type="search" name="pesquisa">
+        </form>
+
+    </body>
+</html>

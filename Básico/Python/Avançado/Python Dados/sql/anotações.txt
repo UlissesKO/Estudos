@@ -1,0 +1,59 @@
+a funçao .connect("") vai criar um banco de dados
+
+o cursor.execute("") serve para apontar para o banco de dados
+
+    toda vez q enviar informaçao para o banco de dados deve chamar a variavel cursor
+    para começar a adicionar coisas utiliza o execute
+        CREATE é para adicionar algo
+               TABLE é pq estou criando uma tabela
+                     Nome_Tabela 
+                                 (Data text, Name text, Wage real) estou falando o q vai ter Nela 
+                                                                   text é texto e real e numero
+    
+    para criar de fato a tabela precisa chamar a variavel de connect do banco de dados e usar a funçao
+        .commit()
+    
+    para inserir valores usa a funçao execute na variavel cursor e faz assim
+        INSERT INTO  vai falar onde vai adicionar as informaçoes
+                    Nome_Tabela  
+                                VALUES ()  dentro dos parenteses passa as informaçoes
+        
+        precisa dar o commit para salvar os dados na tabela
+    
+
+    para selecionar todas as colunas faz assim
+        SELECT 
+              * vai selecionar todos os elementos (para selecionar uma coluna só basta escrever o nome da coluna)
+               FROM  de onde vai selecionar
+                    Nome_Tabela
+
+operadores (sao usados no Where, o qual vem após o "Nome_Tabela" no exemplo acima)
+                (foi feito em primeiro,mostrar.py)
+
+=  igual
+>  maior
+<  menor
+>= maior ou igual
+<= menor ou igual
+<> diferente
+BETWEEN  Entre  (Tem q ser usado junto com o comando Where)
+LIKE  procurar por padrao
+    usado com WHERE e serve para procurar por um padrao
+     sinal de porcentagem %  representa zero, um ou vários caracteres
+     sinal de sublinhado  _  representa um unico caractere
+
+         WHERE Nova_Tabela LIKE "a%"   valores começam com a
+         WHERE Nova_Tabela LIKE "%a"   terminam com a
+         WHERE Nova_Tabela LIKE "_a%"  tem a na segunda posiçao
+         WHERE Nova_Tabela LIKE "a_%"  começa com a e tem pelo menos 2 caracteres
+         WHERE Nova_Tabela LIKE "a%o"  começa com a e termina com o
+         WHERE Nova_Tabela LIKE "%a%"  tem a em qualquer posiçao
+IN  especificar varios valores possiveis
+
+
+sqlite_master é onde fica todas as tabelas do arquivo sql
+
+
+a função lambda no tkinter ser para executar uma função quando o botão for clicado, e nao quando for criado
+
+quando usa o metodo AND, verifica se esta tudo na mesma linha
