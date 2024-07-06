@@ -1,1 +1,1 @@
-Portfólio criado para guardar os arquivos meus de estudo
+Repositório criado para guardar os arquivos meus de estudo

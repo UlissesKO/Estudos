@@ -1,6 +1,6 @@
 import pandas
 
-file = "Dados\Arquivos\salary.csv"
+file = "Python\Dados\Arquivos\salary.csv"
 
 #Vai abrir o arquivo
 data = pandas.read_csv(file)
@@ -14,6 +14,8 @@ print(data['Job Titles'].value_counts())
 print("________________________________")
 
 print(data['Department'].value_counts())
+
+print(data.isna())
 
 
 
