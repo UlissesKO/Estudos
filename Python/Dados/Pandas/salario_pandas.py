@@ -53,6 +53,7 @@ data.drop(columns=['Name'], inplace=True)
 data.insert(0, 'First Name', data.pop('First Name'))
 data.insert(1, 'Surname', data.pop('Surname'))
 
+
 print(data.head(10), '\n')
 print(data.isna().sum(),"\n", data.dtypes, "\n")
 
@@ -69,11 +70,26 @@ print("Quantidade de Rows: ", data2.shape, "\n")
 #Procura determinados valores dentro da coluna especificada
 print(data['Job Titles'].isin(['SERGEANT']), "\n")
                 #groupby vai agrupar as colunas em grupos, neste caso agrupar todos os job titles dentro de um só department
-data3 = data2[['Department', 'Job Titles', 'Annual Salary', 'Hourly Rate']].groupby(['Department', 'Job Titles']).mean()
+data3 = data[['Department', 'Job Titles', 'Annual Salary', 'Hourly Rate']].groupby(['Department', 'Job Titles']).mean()
 #Criou uma nova tabela neste formato                                #.mean() mostra a media da coluna não especificada nesta parte
 print(data3, "\n\n\n")
-                                                                                                
-data3 = data2[['Department', 'Job Titles', 'Annual Salary', 'Hourly Rate']].groupby(['Department', #.agg vai adicionar vários metodos matematicos
+
+#Cria um novo dataframe baseado no groupby do arquivo csv completo                                                                                                
+data3 = data[['Department', 'Job Titles', 'Annual Salary', 'Hourly Rate']].groupby(['Department', #.agg vai adicionar vários metodos matematicos
                                                                                      'Job Titles']).agg(['mean', 'median', 'count', 'max', 'min'])
                                                                                      #O de cima só vai mostrar a média
 print(data3,'\n') 
+
+#Cria um grafico deste dataframe
+import matplotlib.pyplot as plt
+#Cria o grafico
+data.plot()
+
+#Gráfico de dispersão
+data.plot.scatter(y= 'Annual Salary', x='Typical Hours')
+
+#Mostra o gráfico
+plt.show()
+
+
+#TEM MUITO MAIS COISA DO PANDAS
